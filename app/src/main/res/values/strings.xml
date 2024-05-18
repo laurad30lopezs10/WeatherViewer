@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">WeatherViewer</string>
-    <string name="action_setting"> Settings</string>
-    <string name="api_key">f96cbbdcfe187a62566c9d84ed22449f</string>
-    <string name="web_service_url"> </string>
+    <string name="action_setting" translatable="false"> Settings</string>
+    <string name="api_key" translatable="false">f96cbbdcfe187a62566c9d84ed22449f</string>
+    <string name="web_service_url" translatable="false">https://api.openweathermap.org/data/2.5/forecast?q= </string>
+    <string name="url_invalida"  translatable= "false"> Invalid url</string>
+    <string name="imagen_condicion_clima" translatable="false"> Graphical respresentencion of weather</string>
+    <string name="alta_temp" translatable="false">Alta: %s</string>
+    <string name="baja_temp" translatable="false">Baja: %s</string>
+    <string name="Descripcion_dia" translatable="false">%1$s: %2$s</string>
+    <string name="Humedad" translatable="false"></string>
+
 </resources>
