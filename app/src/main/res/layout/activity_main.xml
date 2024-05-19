@@ -10,6 +10,7 @@
     tools:ignore="VisualLintBounds">
 
     <LinearLayout
+        android:id="@+id/coordinatorLayaout"
         android:layout_width="364dp"
         android:layout_height="685dp"
         android:layout_marginStart="16dp"
@@ -42,21 +43,21 @@
             android:contentDescription="@string/sugerencia_texto"
             android:ems="10"
             android:fontFamily="@font/asul"
+            android:gravity="center_horizontal"
             android:inputType="text"
             android:text="@string/sugerencia_texto"
             android:textColor="#77494E"
             android:textSize="23sp"
-            android:gravity="center_horizontal"
             tools:ignore="EditableContentDescCheck,LabelFor" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="top"
             android:background="#F56979"
             android:clickable="true"
             android:contentDescription="@string/Find_location"
-            android:layout_gravity="top"
             app:srcCompat="@android:drawable/checkbox_on_background" />
 
         <ListView
