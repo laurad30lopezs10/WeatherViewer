@@ -3,11 +3,14 @@
     <string name="action_setting" translatable="false"> Settings</string>
     <string name="api_key" translatable="false">f96cbbdcfe187a62566c9d84ed22449f</string>
     <string name="web_service_url" translatable="false">https://api.openweathermap.org/data/2.5/forecast?q= </string>
-    <string name="url_invalida"  translatable= "false"> Invalid url</string>
+    <string name="url_invalida" translatable="false"> Invalid url</string>
     <string name="imagen_condicion_clima" translatable="false"> Graphical respresentencion of weather</string>
-    <string name="alta_temp" translatable="false">Alta: %s</string>
-    <string name="baja_temp" translatable="false">Baja: %s</string>
+    <string name="alta_temp" translatable="false">Highest: %s</string>
+    <string name="baja_temp" translatable="false">Lowest: %s</string>
     <string name="Descripcion_dia" translatable="false">%1$s: %2$s</string>
-    <string name="Humedad" translatable="false"></string>
-
+    <string name="Humedad" translatable="false">Humidity: %s</string>
+    <string name="sugerencia_texto" translatable="false">Enter city name (e.g., London, UK)</string>
+    <string name="Error_lecura" translatable="false">Error when data describing the weather</string>
+    <string name="Errro_conection" translatable="false">Errror when conecting to OpenWeatherMap.org</string>
+    <string name="Find_location" >Go for</string>
 </resources>

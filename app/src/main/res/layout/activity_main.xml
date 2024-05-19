@@ -5,15 +5,61 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/_5510474_job297_ploy_07c_pink_01"
+    tools:context=".MainActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:layout_width="364dp"
+        android:layout_height="685dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/text_app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:fontFamily="@font/bangers"
+            android:text="@string/app_name"
+            android:gravity="center_horizontal"
+            android:textColor="#F66979"
+            android:textSize="40sp" />
+
+        <EditText
+            android:id="@+id/text_ingresar_ubicacion"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:autofillHints=""
+            android:contentDescription="@string/sugerencia_texto"
+            android:ems="10"
+            android:fontFamily="@font/asul"
+            android:inputType="text"
+            android:text="@string/sugerencia_texto"
+            android:textColor="#77494E"
+            android:textSize="23sp"
+            android:gravity="center_horizontal"
+            tools:ignore="EditableContentDescCheck,LabelFor" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F56979"
+            android:clickable="true"
+            android:contentDescription="@string/Find_location"
+            android:layout_gravity="top"
+            app:srcCompat="@android:drawable/checkbox_on_background" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
