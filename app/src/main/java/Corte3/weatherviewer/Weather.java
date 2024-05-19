@@ -23,7 +23,7 @@ public class Weather {
         this.description = description;
         this.iconURL = iconURL;
 
-        // Convertir la marca de tiempo a nombre de día
+
         SimpleDateFormat sdf = new SimpleDateFormat("EEEE", Locale.getDefault());
         try {
             Calendar cal = Calendar.getInstance();

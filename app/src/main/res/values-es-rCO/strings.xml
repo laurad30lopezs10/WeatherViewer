@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">WeatherViewer</string>
+    <string name="action_setting">Ajustes</string>
+    <string name="url_invalida">Url invalido</string>
+    <string name="imagen_condicion_clima">Representacion grafica del clima</string>
+    <string name="alta_temp">Alta: %$</string>
+    <string name="baja_temp">Baja; %$</string>
+    <string name="Humedad">Humedad: %s</string>
+    <string name="sugerencia_texto">Inserte el nombre de una ciudad (e.g., London, UK)</string>
+    <string name="Error_lecura">Error al datos que describen el clima.</string>
+    <string name="Errro_conection">Error al conectarse a OpenWeatherMap.org</string>
     <string name="Find_location" >Ir a buscar</string>
 </resources>
