@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/_5510474_job297_ploy_07c_pink_01"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity"
+    tools:ignore="VisualLintBounds">
 
     <LinearLayout
         android:layout_width="364dp"
@@ -34,7 +35,7 @@
             tools:ignore="TextContrastCheck" />
 
         <EditText
-            android:id="@+id/text_ingresar_ubicacion"
+            android:id="@+id/locationEditText"
             android:layout_width="match_parent"
             android:layout_height="71dp"
             android:autofillHints=""
@@ -49,7 +50,7 @@
             tools:ignore="EditableContentDescCheck,LabelFor" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton4"
+            android:id="@+id/fab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#F56979"
@@ -59,6 +60,7 @@
             app:srcCompat="@android:drawable/checkbox_on_background" />
 
         <ListView
+            android:id="@+id/weatherListView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
