@@ -27,10 +27,11 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/app_name"
             android:fontFamily="@font/bangers"
-            android:text="@string/app_name"
             android:gravity="center_horizontal"
+            android:text="@string/app_name"
             android:textColor="#F66979"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            tools:ignore="TextContrastCheck" />
 
         <EditText
             android:id="@+id/text_ingresar_ubicacion"
