@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="77dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/locationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:fontFamily="@font/asul"
+            android:gravity="center_horizontal"
+            android:hint="Inserte ciudad"
+            android:inputType="text"
+            android:textColor="#77494E"
+            android:textColorHint="#77494E"
+            android:textSize="23sp"
+            tools:ignore="EditableContentDescCheck,LabelFor" />
+
+
+        <ListView
+            android:id="@+id/weatherListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

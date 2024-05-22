@@ -1,69 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/coordinatorLayaout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/_5510474_job297_ploy_07c_pink_01"
     tools:context=".MainActivity"
-    tools:ignore="VisualLintBounds">
+    tools:ignore="ExtraText">
 
-    <LinearLayout
-        android:id="@+id/coordinatorLayaout"
-        android:layout_width="364dp"
-        android:layout_height="685dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="30dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="#F79BA5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="#77494E" />
 
-        <TextView
-            android:id="@+id/text_app_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/app_name"
-            android:fontFamily="@font/bangers"
-            android:gravity="center_horizontal"
-            android:text="@string/app_name"
-            android:textColor="#F66979"
-            android:textSize="40sp"
-            tools:ignore="TextContrastCheck" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:background="#F56979"
+        android:clickable="true"
+        android:contentDescription="@string/Find_location"
+        app:srcCompat="@android:drawable/checkbox_on_background" />
 
-        <EditText
-            android:id="@+id/locationEditText"
-            android:layout_width="match_parent"
-            android:layout_height="71dp"
-            android:autofillHints=""
-            android:contentDescription="@string/sugerencia_texto"
-            android:ems="10"
-            android:fontFamily="@font/asul"
-            android:gravity="center_horizontal"
-            android:inputType="text"
-            android:text="@string/sugerencia_texto"
-            android:textColor="#77494E"
-            android:textSize="23sp"
-            tools:ignore="EditableContentDescCheck,LabelFor" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:background="#F56979"
-            android:clickable="true"
-            android:contentDescription="@string/Find_location"
-            app:srcCompat="@android:drawable/checkbox_on_background" />
-
-        <ListView
-            android:id="@+id/weatherListView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <include layout="@layout/content_main" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

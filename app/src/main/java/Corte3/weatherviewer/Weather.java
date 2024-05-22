@@ -14,49 +14,32 @@ public class Weather {
     public final String description;
     public final String iconURL;
 
-    public Weather(String dayOfWeek, String minTemp, String maxTemp, String humidity,
-                   String description, String iconURL) {
-        this.dayOfWeek = dayOfWeek;
-        this.minTemp = formatTemperature(minTemp);
-        this.maxTemp = formatTemperature(maxTemp);
-        this.humidity = formatPercentage(humidity);
+    public Weather(long timeStamp, double minTemp, double maxTemp,
+                   double humidity, String description, String iconName) {
+        // NumberFormat to format double temperatures rounded to integers
+        NumberFormat numberFormat = NumberFormat.getInstance();
+        numberFormat.setMaximumFractionDigits(0);
+
+        this.dayOfWeek = convertTimeStampToDay(timeStamp);
+        this.minTemp = numberFormat.format(minTemp) + "\u00B0F";
+        this.maxTemp = numberFormat.format(maxTemp) + "\u00B0F";
+        this.humidity = NumberFormat.getPercentInstance().format(humidity / 100.0);
         this.description = description;
-        this.iconURL = iconURL;
-
-
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE", Locale.getDefault());
-        try {
-            Calendar cal = Calendar.getInstance();
-            cal.setTime(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").parse(dayOfWeek));
-            this.dayOfWeek = sdf.format(cal.getTime());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        this.iconURL =
+                "https://openweathermap.org/img/w/" + iconName + ".png";
     }
-
-    private String formatTemperature(String temp) {
-        NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
-        nf.setMaximumFractionDigits(0);
-        return nf.format(Double.parseDouble(temp)) + "\u00B0F";
-    }
-
-    private String formatPercentage(String percent) {
-        double value = Double.parseDouble(percent) / 100.0;
-        NumberFormat nf = NumberFormat.getPercentInstance(Locale.US);
-        return nf.format(value);
-    }
-
+    // convert timestamp to a day's name (e.g., Monday, Tuesday, ...)
     private static String convertTimeStampToDay(long timeStamp) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(timeStamp * 1000);
-        TimeZone tz = TimeZone.getDefault();
+        Calendar calendar = Calendar.getInstance(); // create Calendar
+        calendar.setTimeInMillis(timeStamp * 1000); // set time
+        TimeZone tz = TimeZone.getDefault(); // get device's time zone
 
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
-        sdf.setTimeZone(tz);
+        // adjust time for device's time zone
+        calendar.add(Calendar.MILLISECOND, tz.getOffset(calendar.getTimeInMillis()));
 
-        String dayName = sdf.format(calendar.getTime());
-        return dayName;
+        // SimpleDateFormat that returns the day's name
+        SimpleDateFormat dateFormatter = new SimpleDateFormat("EEEE");
+        return dateFormatter.format(calendar.getTime());
     }
-
 }
 
