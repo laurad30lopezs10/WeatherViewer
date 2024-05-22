@@ -23,13 +23,15 @@
             android:layout_width="match_parent"
             android:layout_height="71dp"
             android:autofillHints=""
+            android:contentDescription="@string/hint_text"
             android:ems="10"
             android:fontFamily="@font/asul"
             android:gravity="center_horizontal"
-            android:hint="Inserte ciudad"
+            android:hint="@string/hint_text"
             android:inputType="text"
             android:textColor="#77494E"
             android:textColorHint="#77494E"
+            android:textColorLink="#D53C4E"
             android:textSize="23sp"
             tools:ignore="EditableContentDescCheck,LabelFor" />
 
